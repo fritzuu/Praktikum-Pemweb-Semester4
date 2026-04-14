@@ -20,8 +20,14 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-}
 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
 /* =========================================
    Layout Containers
 ========================================= */
@@ -62,9 +68,6 @@ body {
     margin-top: 50px;
 }
 
-/* =========================================
-   Grid Layout untuk Review Box
-========================================= */
 .review-grid {
     display: grid;
     /* Auto-fit: Otomatis menyesuaikan jumlah kolom berdasarkan lebar layar */
@@ -73,9 +76,7 @@ body {
     margin-top: -30px; /* Menarik grid sedikit ke atas menimpa header */
 }
 
-/* =========================================
-   Styling untuk Box / Card Review
-========================================= */
+
 .review-card {
     background-color: var(--card-bg);
     border-radius: 12px;
