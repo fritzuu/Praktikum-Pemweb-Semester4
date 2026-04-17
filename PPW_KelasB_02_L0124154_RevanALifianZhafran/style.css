@@ -1,0 +1,145 @@
+/* =========================================
+   Reset CSS & Variabel Dasar
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #080616;
+    --secondary-color: #1A1953;
+    --background-color: #f8f9fa;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+/* =========================================
+   Layout Containers
+========================================= */
+/* Container membatasi lebar maksimal konten agar rapi di layar besar */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   Header & Footer
+========================================= */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+.review-grid {
+    display: grid;
+    /* Auto-fit: Otomatis menyesuaikan jumlah kolom berdasarkan lebar layar */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -30px; /* Menarik grid sedikit ke atas menimpa header */
+}
+
+
+.review-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efek saat mouse diarahkan ke box (Hover) */
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.genre-tag {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.review-card h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.author {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+.card-body {
+    flex-grow: 1; /* Membuat body mengisi sisa ruang jika konten kurang */
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: justify;
+}
+
+.card-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-weight: 600;
+}
+
+.rating {
+    color: #f39c12; /* Warna emas untuk bintang */
+}
